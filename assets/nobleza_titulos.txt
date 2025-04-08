@@ -1,0 +1,26 @@
+Implacable
+Noble
+Conquistador
+Grande
+Inquebrantable
+Rey
+Principe
+Archiduque
+Gran Duque
+Duque
+Gran Marqués
+Marqués
+Conde Palatino
+Conde
+Vizconde
+Baron
+Baronet
+Señor
+Caballero Real
+Caballero
+
+
+
+
+
+

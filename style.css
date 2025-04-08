@@ -1,0 +1,242 @@
+@font-face {
+    font-family: DarksSkyrimFont;
+    src: url('./assets/DarksSkyrimFont.ttf');
+}
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    border: none;
+}
+
+body {
+    background-image: url('./assets/wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    background-size:cover;
+}
+
+.titulo {
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding:1em;
+    /*background:rgba(187,38,18,1);*/
+    background-image: linear-gradient(to top, rgba(65,18,8,0.9), rgba(103,35,21,0.9));
+    color:rgb(241,221,167);
+    max-width:800px;
+    min-width:350px;
+    width:100%;
+    text-align: center;
+    font-size:larger;  
+}
+
+#logo-titulo {
+    position:relative;
+    display:inline-block;
+    padding:0;margin:0;    
+    max-width:800px;
+    width:100%;
+    text-align: center;
+}
+
+.titulo h1 {
+    float:right;
+    padding:1em;
+    font-size: 2em;
+}
+
+.titulo #logo {
+    display:block;
+    float:left;
+    max-width:4em;
+    padding:5px;
+    margin:0px;
+    top:0;
+    left:0;
+    text-align: center;
+}
+
+.table-notas {
+    margin: 0 auto;
+    /*background: rgba(226,200,167,0.9);*/
+    background: rgb(70,44,21,0.9);
+    border: none;
+    max-width:800px;
+    width:100%;
+    text-align: center;
+    font-size:larger;
+    margin-bottom: 2em; /* ✅ Nuevo margen inferior */
+} 
+
+.table-notas tr th {
+    padding:1em;
+    background-color: rgba(187,38,18,0.9);
+    /*background-color: linear-gradient(to top, rgba(187,38,18,0.9), rgba(187,38,18,0.9));*/
+    color:rgb(241,221,167);
+    font-size: large;
+}
+
+.table-notas tr td {
+    padding: 1em;
+    color:rgb(241,221,167);
+}
+
+.table-notas tr td:nth-child(1){
+    color:rgb(124,168,199);
+}
+
+.table-notas tr td:nth-child(2){
+    color:rgb(255,220,69);
+}
+
+@media only screen and (max-width: 850px) {
+    
+    .table-notas {
+        margin:0px;
+        padding:0px;
+        max-width: 100%;  
+    } 
+    .titulo {
+        max-width: 100%;  
+        width: 100%;  
+    }
+    
+    #logo-titulo {
+        margin:0px;
+        padding:0px;
+        max-width: 100%;
+        width:100%;
+        display:flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .titulo h1 {
+        margin:0px;
+        padding:0px;
+        max-width: 100%;  
+        width: 100%; 
+        font-size:larger;
+    }   
+
+}
+
+/* === BOTÓN FLOTANTE === */
+.btn-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffd700;
+    color: #000;
+    border: none;
+    padding: 15px 20px;
+    font-size: 32px;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.btn-flotante:hover {
+    background-color: #e6c200;
+}
+
+/* === MODAL === */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-contenido {
+    background-color: #1e1e1e;
+    margin: 5% auto;
+    padding: 30px;
+    border: 1px solid #333;
+    width: 60%;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    color: #f0f0f0;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* Modal heading */
+.modal-contenido h2 {
+    margin-top: 0;
+    color: #ffd700;
+    text-align: center;
+}
+
+/* Lista de títulos */
+.modal-contenido ul {
+    list-style: none;
+    padding: 0;
+}
+
+.modal-contenido li {
+    padding: 8px 0;
+    border-bottom: 1px solid #333;
+    font-size: 18px;
+}
+
+/* Botón de cerrar */
+.cerrar-modal {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+    color: #ffd700;
+}
+
+.cerrar-modal:hover {
+    color: #fff;
+}
+
+/* === RESPONSIVE MODAL === */
+@media screen and (max-width: 768px) {
+    .modal-contenido {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .btn-flotante {
+        bottom: 15px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 28px;
+    }
+
+    .modal-contenido li {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .modal-contenido {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .btn-flotante {
+        width: 45px;
+        height: 45px;
+        font-size: 24px;
+    }
+}
