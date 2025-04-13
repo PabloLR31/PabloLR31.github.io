@@ -11,7 +11,7 @@ const titulosNobleza = [
     new Nobleza('🛡️', 'Escudero', 3000),
     new Nobleza('🏇', 'Caballero', 6000),
     new Nobleza('🗡️', 'Señor', 9000),
-    new Nobleza('🏇', 'Barón', 12000),
+    new Nobleza('🏰', 'Barón', 12000),
     new Nobleza('💂🏻', 'Vizconde', 15000),
     //minimo de aprobacion 500 puntos (32 clases = 16k)
     new Nobleza('🛕', 'Conde Palatino', 18000),
